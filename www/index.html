@@ -12,18 +12,16 @@
 
 
 <script type="text/javascript">
-function onSuccess(result){
-  console.log("Success:"+result);
-}
+$(document).ready(function(){
 
-function onError(result) {
-  console.log("Error:"+result);
-}
 
-function onCall(){
-	window.plugins.CallNumber.callNumber(onSuccess, onError, "57832250", true);
-	
-}
+cordova.plugins.notification.local.schedule({
+    title: 'My first notification',
+    text: 'Thats pretty easy...',
+    foreground: true
+});
+
+});
 
 
 </script>
